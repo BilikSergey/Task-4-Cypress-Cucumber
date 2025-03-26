@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open --config-file configs/cypress.config.js",
+    "cypress:run": "cypress run --config-file configs/cypress.config.js",
+    "test:chrome": "cypress run --browser chrome --config-file configs/cypress.config.js",
+    "test:firefox": "cypress run --browser firefox --config-file configs/cypress.config.js",
+    "test:edge": "cypress run --browser edge --config-file configs/cypress.config.js",
+    "test:special:resolution": "cypress run --config-file  configs/cypress-laptop.config.js",
+    "test:login:run": "cypress run --spec cypress/e2e/features/login.feature --config-file configs/cypress.config.js",
+    "test:mainFunctions:run": "cypress run --spec cypress/e2e/features/mainFunctions.feature --config-file configs/cypress.config.js",
+    "test:shop:run": "cypress run --spec cypress/e2e/features/shop.feature --config-file configs/cypress.config.js",
+    "test:signUp:run": "cypress run --spec cypress/e2e/features/signUp.feature --config-file configs/cypress.config.js",
+    "cleancache": "rm -rf node_modules/.cache"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cucumber/cucumber": "^11.2.0",
+    "@faker-js/faker": "^9.6.0",
+    "cypress": "^14.2.0",
+    "esbuild": "^0.25.1"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-real-events": "^1.14.0"
+  }
+}
