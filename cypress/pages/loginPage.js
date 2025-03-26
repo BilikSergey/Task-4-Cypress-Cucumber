@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import userData from "../fixtures/userData.json";
+import userData from "../data/userData.json";
 
 class LoginPage {
   get inputEmail() {

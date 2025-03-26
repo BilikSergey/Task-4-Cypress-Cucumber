@@ -2,8 +2,8 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { faker } from "@faker-js/faker";
 const mainPage = require("../../pages/mainPage");
 const signUpPage = require("../../pages/signUpPage");
-import testData from "../../fixtures/testData.json";
-import userData from "../../fixtures/userData.json";
+import testData from "../../data/testData.json";
+import userData from "../../data/userData.json";
 
 Given("User is on the main page", () => {
   mainPage.visitMainPage();
