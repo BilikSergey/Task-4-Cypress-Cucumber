@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 class mainFunctions {
   get dropDownMainMenu() {
     return cy.get(".c-UazGY");
@@ -14,11 +12,11 @@ class mainFunctions {
   }
 
   get voiceAIImage() {
-    return cy.get(".c-fGHEql.c-fiJFTo.c-hihSaP.c-bjYQHG");
+    return cy.get('[id*="47IXUipwXaswvrGRT7yea1"] img');
   }
 
   get voiceAITitle() {
-    return cy.get(".c-PJLV.c-fGbiyG.c-PJLV-kmbBBS-dark-true.c-eZpJHu");
+    return cy.get('[id*="47IXUipwXaswvrGRT7yea1"] h1');
   }
 
   get buttonSMSAPI() {
@@ -26,20 +24,18 @@ class mainFunctions {
   }
 
   get imageSMSAPI() {
-    return cy.get(
-      ".c-fGHEql.c-fiJFTo.c-hihSaP.c-fiJFTo-fRKYWh-contain-true.c-bjYQHG"
-    );
+    return cy.get('[id="1Km13UufIOZIojgMFAN6R9"] img');
   }
 
   get titleSMSAPI() {
-    return cy.get(".c-PJLV.c-fGbiyG.c-PJLV-cHtIMp-dark-false.c-eZpJHu");
+    return cy.get('[id="1Km13UufIOZIojgMFAN6R9"] h1');
   }
 
   get buttonChat() {
     return cy.get(".c-bpNouX");
   }
 
-  get textareaChat() {
+  get textAreaChat() {
     return cy.get(".c-fJsHXZ");
   }
 
@@ -69,7 +65,7 @@ class mainFunctions {
 
   clickButtonChat() {
     this.buttonChat.click();
-    this.textareaChat.type(
+    this.textAreaChat.type(
       "Hello! I just want to test your site for improving my QA skills"
     );
     this.sendMessageButton.click();

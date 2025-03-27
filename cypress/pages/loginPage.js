@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import userData from "../data/userData.json";
 
 class LoginPage {
@@ -15,7 +14,7 @@ class LoginPage {
   }
 
   get errorMessageRecaptcha() {
-    return cy.get(".MuiAlert-message.frontend-customer-portal-1xsto0d");
+    return cy.get(".MuiAlert-message");
   }
 
   visitLoginPage() {

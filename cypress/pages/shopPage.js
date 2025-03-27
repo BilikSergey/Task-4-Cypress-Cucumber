@@ -1,14 +1,10 @@
-/// <reference types="cypress" />
-
 class ShopPage {
   get buttonShop() {
     return cy.get("#HeaderMenu-shop");
   }
 
   get buttonAddToCart() {
-    return cy.get(
-      "#quick-add-template--14828910739534__product-grid6960027533390-submit"
-    );
+    return cy.get("[id*=product-grid6960027533390-submit]");
   }
 
   get buttonCheckOut() {
@@ -20,7 +16,7 @@ class ShopPage {
   }
 
   get priceList() {
-    return cy.get(".price-item.price-item--sale.price-item--last");
+    return cy.get('[id="product-grid"] [class*="price-item--sale"]');
   }
 
   get titleList() {
@@ -28,15 +24,11 @@ class ShopPage {
   }
 
   get titleSwagAlert() {
-    return cy.get(
-      ".announcement-bar__link.link.link--text.focus-inset.animate-arrow"
-    );
+    return cy.get('[href="/products/telnyx-pullover-hoodie"]');
   }
 
   get formOfWareAtCart() {
-    return cy.get(
-      "._1ip0g651._1ip0g650._1fragemlt._1fragem46._1fragem5z._1fragem2s"
-    );
+    return cy.get(".i4DWM");
   }
 
   get pictureOfWareSwagAlert() {
@@ -61,7 +53,7 @@ class ShopPage {
 
   get wareHat() {
     return cy.get(
-      '[href="/products/telnyx-classic-hat?_pos=1&_sid=49e3d99ce&_ss=r"]'
+      '[href="/products/telnyx-classic-hat?_pos=1&_sid=5f5dbd22e&_ss=r"]'
     );
   }
 
@@ -111,7 +103,7 @@ class ShopPage {
   }
 
   clickOnSwagAlert() {
-    this.titleSwagAlert.click();
+    this.titleSwagAlert.eq(0).click();
   }
 
   deleteWareAtCart() {

@@ -24,5 +24,9 @@
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-real-events": "^1.14.0",
     "cypress-waitfor": "^1.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.js"
   }
 }

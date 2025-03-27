@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 class SignUpPage {
   get buttonSignUp() {
     return cy.get('[href="/sign-up"]').first();
@@ -30,7 +28,7 @@ class SignUpPage {
   }
 
   get errorMessageRecaptcha() {
-    return cy.get(".c-UUKrH.c-UUKrH-kDyeyw-type-error");
+    return cy.get(".c-UUKrH");
   }
 
   get errorMessageTerms() {
